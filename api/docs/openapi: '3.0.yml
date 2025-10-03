@@ -1,0 +1,44 @@
+openapi: "3.0.3"
+info:
+  title: Movie Explorer API
+  description: API documentation for the Movie Explorer application.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8888
+paths:
+  /movies:
+    get:
+      summary: Get a list of movies
+      responses:
+        "200":
+          description: A list of movies
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: "./schemas/movies.yaml#/components/schemas/Movie"
+  /actors:
+    get:
+      summary: Get a list of actors
+      responses:
+        "200":
+          description: A list of actors
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: "./schemas/actors.yaml#/components/schemas/Actor"
+  /genres:
+    get:
+      summary: Get a list of genres
+      responses:
+        "200":
+          description: A list of genres
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: "./schemas/genres.yaml#/components/schemas/genre"

@@ -1,0 +1,20 @@
+{
+  "name": "movieexplorer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"python api/app.py\" \"npm run dev --prefix frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "axios": "^1.12.2"
+  }
+}

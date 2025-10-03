@@ -1,0 +1,20 @@
+components:
+  schemas:
+    Movie:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: Inception
+        director:
+          type: string
+          example: Christopher Nolan
+        releaseYear:
+          type: integer
+          example: 2010
+        genre:
+          type: string
+          example: Science Fiction
