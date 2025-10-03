@@ -1,10 +1,13 @@
 <template>
-  <div>{{ genres }}</div>
+  <GenreCard v-for:="genre in genres" :key="genre.id" :genre="genre" />
 </template>
 <script lang="ts">
 import axios from 'axios'
+import GenreCard from './GenreCard.vue'
+
 export default {
   name: 'GenresDetail',
+  components: { GenreCard },
   data() {
     return { genres: [] }
   },
